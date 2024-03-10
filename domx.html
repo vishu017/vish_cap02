@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: red;
+          }
+    </style>
+</head>
+<body>
+    
+    <button id="clickprin">play</button>
+    <h1>i am v</h1>
+    <div id="cont">
+        <button>0</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button> 
+    </div>
+    
+   
+</body>
+</html>
+<script>
+    //let head = document.getElementById("heading")
+    
+    let button = document.getElementById("clickprin")
+    let head = document.querySelector('h1')
+   button.addEventListener('click',function()
+   {
+      console.log("playboy");
+      head.style.color = "red";
+    head.style.backgroundColor = "yellow";
+   })
+
+  let AllButton = document.querySelectorAll('#cont > button')
+   
+  for(let i = 0; i < AllButton.length; i++)
+  
+  {
+    AllButton[i].addEventListener('click',function()
+    {
+      if(i == 4)
+      {
+        head.innerText = ""
+      }
+      else{
+        head.innerText = AllButton[i].innerText  
+      }
+      //console.log(AllButton[i].innerText)
+      //head.innerText = AllButton[i].innerText
+    })
+  }
+
+    
+</script>

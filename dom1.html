@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-1</title>
+    <style>
+        h1{
+            color: red;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1 id="heading">i am a body</h1>
+    <p id="ptag">i ama ptag</p> 
+    <h1 id="heading">I am a very good heading</h1>
+    <p id="ptag">I am a cool paragraph</p> 
+   
+</body>
+</html>
+<script>
+     let head = document.getElementById("heading")
+     head.innerText = "i am a code warior"
+     let ptag = document.getElementById("ptag")
+     console.log(ptag.innerText)
+     console.log(head.innerText)
+
+     let obj = {
+         name:"vishal"
+     }
+     obj.name = "sivam"
+     console.log(obj)
+</script>
+
+<!-- document.getElementById("id name") single element use id name
+document.getElementBytagname("tag name") multiple element,use tagname
+document.getElementByclassname("class name") multiple,use tagname,id name,class name
+document.queryselectorall multiple element,use tagname,id name,class name,combinator
+document.queryselector single element,use tagname,id name,class name,combinator -->
