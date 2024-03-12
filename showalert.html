@@ -4,31 +4,38 @@
     <title>Showing Alerts</title>
 </head>
 <body>
+    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name2">
+    <!-- <input type="text" name="name" id="name3"> -->
     <button onclick="showFirstName()">FIRSTNAME</button>
     <button onclick="showLastName()">LASTNAME</button>
     <button onclick="showFullName()">FIRSTNAME LASTNAME</button>
 
     <script type="text/javascript">
         function showFirstName() {
-            var firstName = prompt("Enter your first name:");
+            let firstName = document.getElementById("name")
+            // let firstName = prompt("Enter your first name:");
             if (firstName) {
-                alert("Your first name is: " + firstName);
+                alert("Your first name is: " + (firstName.value));
             }
         }
 
         function showLastName() {
-            var lastName = prompt("Enter your last name:");
+            let lastName = document.getElementById("name2")
+            //let lastName = prompt("Enter your last name:");
             if (lastName) {
-                alert("Your last name is: " + lastName);
+                alert("Your last name is: " + (lastName.value));
             }
         }
 
         function showFullName() {
-            var firstName = prompt("Enter your first name:");
-            var lastName = prompt("Enter your last name:");
+           // let firstName = prompt("Enter your first name:");
+            //let lastName = prompt("Enter your last name:");
+            let firstName = document.getElementById("name")
+            let lastName = document.getElementById("name2")
 
             if (firstName && lastName) {
-                alert("Your full name is: " + firstName + " " + lastName);
+                alert("Your full name is: " + (firstName.value + " " + lastName.value));
             }
         }
     </script>
