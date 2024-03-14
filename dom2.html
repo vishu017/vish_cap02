@@ -1,39 +1,24 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom-2</title>
-    <style>
-
-    </style>
-</head>
-<body>
-    <h1 id="heade">i am a head</h1>
-    <button onclick="clicked()">Button</button>
-   
-</body>
-</html> 
-<script>
-    let head = document.getElementById("heade")
-     function clicked(){
-        //console.log('i am click')
-         head.innerText = " i am good headimg"
-     }
-</script> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Document</title>
 </head>
 <body>
-  <button id="showQuoteButton">Show Quote in console</button>
-  <p id="quote">Talk is cheap. Show me the code.</p>
+  <h1>This example demonstrates how we can change text content when clicking on button</h1>
+  <hr>
+  <h1 id="display">Click on Login to continue</h1>
+  <button onClick="login()">Login</button>
+  <button onClick="logout()">Logout</button>
 </body>
-<script>
-   let quit = document.getElementById("quote")
-   function showQuoteButton(){
-    console.log(quit)
-   } 
-</script>
 </html>
+<script>
+  function login() {
+    document.getElementById("display")
+    console.log("Login Success");
+  }
+
+  function logout() {
+    document.getElementById("display")
+    console.log("Login Success");
+  }
+</script>
