@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scam</title>
+  </head>
+  <body>
+    <img
+      id="scamImage"
+      src="https://miro.medium.com/max/1400/1*mdcu3Ku9r44HMtraHUqu5g.jpeg"
+      alt=""
+    />
+  </body>
+  <script>
+    // Write JS here
+    document.getElementById("scamImage").addEventListener("click", function() {
+      var confirmRedirect = confirm("The website you are going to visit may harm your computer. Do you still want to redirect?");
+      if (!confirmRedirect) {
+        console.log("User decided not to redirect.");
+      } else {
+        console.log("User chose to proceed with the redirection.")
+      }
+    });
+  </script>
+</html>
