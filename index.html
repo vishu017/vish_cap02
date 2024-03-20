@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+<script>import React, { useState, useContext } from 'react';
+
+// Step 2: Create a context
+const DataContext = React.createContext();
+
+// Step 3: Create a form component
+function ApplicationForm() {
+  const [name, setName] = useState('');
+  const [gender, setGender] = useState('Male');
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState('');
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+
+    // Step 4: Use fetch to submit form data
+    try {
+      const res = await fetch('https://example.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, gender })
+      });
+      
+      const data = await res.json();
+      setResponse(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+
+    setLoading(false);
+    setName('');
+    setGender('Male');
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {/* Step 5: Display loading component */}
+      {loading && <Loading />}
+
+      <h1>Masai School Application</h1>
+      <p>Enter Your name and gender to apply for Masai School</p>
+      {/* Step 7: Reset the form after submission */}
+      <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" required />
+      <select value={gender} onChange={(e) => setGender(e.target.value)}>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <button type="submit">Apply</button>
+
+      {/* Step 6: Display response data */}
+      {response && <h2 id="display">Display entered name and gender here: {response}</h2>}
+    </form>
+  );
+}
+
+// Step 1: Use context provider
+function App() {
+  return (
+    <DataContext.Provider value={{}}>
+      <ApplicationForm />
+    </DataContext.Provider>
+  );
+}
+
+export default App;
+</script>

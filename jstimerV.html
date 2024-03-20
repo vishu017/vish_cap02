@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js stopwatch</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        .contain{
+            margin-top: 100px;
+        }
+        .display{
+            font-size: 2em;
+        }
+        .control button{
+            margin: 4px;
+            padding: auto;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="display" id="display">00:00:00</div>
+        <div class="control">
+            <button onclick="start()">Start</button>
+            <button onclick="pause()">Pause</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let timer;
+    let hours = 0;
+    let minutes = 0;
+    let second = 0;
+
+    function start() {
+        if(!timer){
+            timer = setInterval(updateTimer, 1000);
+        }
+    }
+
+    function pause() {
+        clearInterval(timer);
+        timer = null;
+    }
+
+    function reset() {
+        clearInterval(timer);
+        timer = null;
+        hours = 0;
+        minutes = 0;
+        second = 0;
+        updateDisplay();
+    }
+
+    function updateTimer(){
+        second++;
+        if (second === 60) {
+            second = 0;
+            minutes++;
+        }
+        if (minutes === 60) {
+            minutes = 0;
+            hours++;
+        }
+        updateDisplay();
+    }
+
+    function updateDisplay(){
+        const display = document.getElementById('display');
+        const formattedTime = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(second)}`;
+        display.textContent = formattedTime;
+    }
+
+    function formatTime(time) {
+        return time < 10 ? '0' +time :time;
+    }
+</script>
