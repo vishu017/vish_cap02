@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function printPrimes(limit) {
+    let primes = new Array(limit + 1).fill(true);
+
+    primes[0] = primes[1] = false;
+
+    for (let i = 2; i * i <= limit; i++) {
+        if (primes[i]) {
+            for (let j = i * i; j <= limit; j += i) {
+                primes[j] = false;
+            }
+        }
+    }
+
+    for (let i = 2; i <= limit; i++) {
+        if (primes[i]) {
+            console.log(i);
+        }
+    }
+}
+
+printPrimes(100);
+
+</script>
+</html>
