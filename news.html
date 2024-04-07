@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .black{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 28px;
+        color: black;
+    }
+        .red{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 28px;
+        color: red;
+    }
+    .child{
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           height: 90%;
+           width: 350px;
+           margin: auto; 
+        /* margin: top right bottam left*/
+        }
+    #parent{    
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  
+      height: 400px;
+      width: 80%;
+      display: flex;
+      justify-content: space-evenly;
+      margin-left: 170px;
+     /*  padding: 20px 0px 20px 0px; */
+   }
+    .avatar{
+      width: 80%;
+      height: 200px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      margin: 10px 20px 10px 40px;
+        
+    }
+    .para1{
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      text-align: center;
+    }
+    .para2{
+      font-size: 16px;
+      font-family: sans-serif; 
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+  <br>
+  <br>
+    <p style="text-align: center;"><span class="black">Masai In</span> <span class="red">News</span></p>
+  <br>
+  <br>
+    <div id="parent">
+      <div class="child"><img class="avatar" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Newsroom_3_373bcc5e7c.png" alt="">
+       <p class="para1">India Quotient-backed Masai School launches AI-powered tech recruitment platform</p>
+       <p class="para2">The idea behind AI-powered Level Up is 'to disrupt LinkedIn in the next thr...</p>
+      </div>
+
+      <div class="child"><img class="avatar" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/image_143_4bd32ade6a.png" alt="">
+       <p class="para1">Masai School's founder & CEO, Prateek Shukla felicitated at Times 40 Under 40 </p>
+       <p class="para2">The true heroes in this journey, in my opinoin, are the amezing Masai team...</p>
+      </div>
+
+      <div class="child"><img class="avatar" src="https://masai-website-images.s3.ap-south-1.amazonaws.com/image_142_09e44dc8cd.png" alt="">
+        <p class="para1">Hiring for business impact with Masai School</p>
+        <p class="para2">While Masai will find the best fit for you organisation's needs and offer...</p>
+      </div>
+    </div>
+</body>
+</html>

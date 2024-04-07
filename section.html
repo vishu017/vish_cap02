@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+        #head{
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+         .navbar{
+           
+
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .navbar>a{
+      color: #fff;
+      /* color: antiquewhite; */
+      text-decoration: none;
+     
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #444;
+      font-size: 16px;
+      /* padding-left: 100px; */
+        }
+        .navbar>select{
+           color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #444;
+            font-size: 16px;
+        }
+        .navbar>select{
+            display: none;
+        }
+        @media only screen and (max-width: 786px){
+            .navbar>a{
+                display: none;
+            }
+        .navbar>select {
+            display: inline-block;
+            appearance: none;
+            -webkit-appearance: none ;
+            background-color: #555;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid#777;
+            width: 100%;
+            box-sizing: border-box;
+            color: #fff;
+        }
+    }
+        #sector{
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+        }
+        #sector>img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        #sector>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media only screen and (max-width: 786px){
+           #sector{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #sector>div>img {
+                width: 45%;
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head.navbar>
+<body>
+    <header id="head"></header>
+    <nav class="navbar">
+     <a href="#home">Home</a>
+     <a href="#education">Education</a>
+     <a href="#project">Project</a>
+     <a href="#skill">Skill</a>
+     <a href="#contact">Contact Me</a>
+     <select >
+        <option value="#home">Home</option>
+        <option value="#education">Education</option>
+        <option value="#projects">Project</option>
+        <option value="#skills">Skill</option>
+        <option value="#contact">Contact</option>
+     </select>
+    </nav>
+    <div id="sector">
+    <section id="home">
+        <div><img src="htmlV/Screenshot 2024-04-03 214644.png" alt="Home Image"></div>
+        <div>
+            <h2>Home</h2>
+            <p>This is a dummy description for the Home section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </section>
+    <section id="education"><div><img src="htmlV/Screenshot 2024-04-03 212840.png" alt=""></div><div><h2>Education</h2><p>This is a dummy description for the Education section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div></section>
+    <section id="project"><img src="htmlV/Screenshot 2024-04-03 230435.png" alt=""><h2>Project</h2><p>This is a dummy description for the Projects section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></section>
+    <section id="skill"><img src="htmlV/Screenshot 2024-04-03 230615.png" alt=""><h2>Skill</h2><p>This is a dummy description for the Skills section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></section>
+    <section id="contact"><img src="htmlV/Screenshot 2024-04-03 230734.png" alt=""><h2>Contact</h2><p>This is a dummy description for the Contact Me section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></section></div>
+</body>
+</html>

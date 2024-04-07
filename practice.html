@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .navbar-container{
+      width: 100%;
+      background-color: aqua; 
+      padding: 15px 0px;
+      display: flex;
+      justify-content: space-evenly;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+    }
+    .navbar-container>button{
+      background-color: tomato;
+      color: antiquewhite;
+      border: none;
+      padding: 5px 8px;
+      font-size: 17px;
+      border-radius: 10px;
+    }
+    .content-container{
+      display: grid;
+      width: 80%;
+      /* border: 2px solid blue; */
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      
+      margin: auto;
+      margin-top: 100px;
+    }
+    .content-container>div{
+      /* border: 1px solid black; */
+      text-align: center;
+      box-shadow: 10px 5px 5px gainsboro;
+    }
+    .content-container>div>img{
+      width: 80%;
+    }
+    @media all and (max-width : 900px) and (min-width:550px) {
+      .content-container{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .navbar-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+      }
+    }
+    @media all and (max-width:549px) and (min-width:0px){
+      .content-container{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .navbar-container{
+        flex-wrap: wrap;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+    }
+      
+    
+  </style>
+</head>
+<body>
+  <div class="navbar-container">
+    <button>press me</button>
+    <button>press me</button>
+    <button>press me</button>
+    <button>press me</button>
+    <button>press me</button>
+    <button>press me</button>
+  </div>
+  
+  <div class="content-container">
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+    <div>
+      <img src="Screenshot 2024-04-02 161204.png" >
+      <p><b>Title :</b> mobile phone</p>
+      <p><b>Price :</b> 25000</p>  
+    </div>
+
+  </div>
+</body>
+</html>
+<!-- gap=20px
+400px => 100% => 25%*4
+
+400px => 1fr => 1fr *4
+320px => 1fr => -->
+
+<!-- large screen => 1000px - 1900px 
+med screen => 600px - 1000px
+small screen => 300px - 600px-->

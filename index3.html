@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      
+      .schedule {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .schedule h2 {
+        text-align: center;
+        color: #333;
+      }
+      
+      .time, .day, .event {
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      
+      .time {
+        grid-column: 1;
+        grid-row: span 2;
+      }
+      
+      .day {
+        background-color: #f7d7ea;
+        font-weight: bold;
+      }
+      
+      .event {
+        background-color: #fce8b4;
+      }
+      
+      .schedule {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1px;
+      }
+      
+      .schedule .time:nth-child(odd) {
+        background-color: #f7d7ea;
+      }
+      
+      .schedule .day:nth-child(2n) {
+        background-color: #f7d7ea;
+      }
+      </style>
+    </head>
+    <body>
+      <div class="schedule">
+        <h2>Weekly Schedule</h2>
+        <div class="time">Time</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="time">08:00</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="time">09:00</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <div class="event">Class</div>
+        <!-- Repeat for other times -->
+      </div>    
+</body>
+</html>
